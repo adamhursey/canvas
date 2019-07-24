@@ -7,7 +7,7 @@ import CanvasDraw from "react-canvas-draw";
 class App extends Component {
   state = {
     color: '#000000',
-    brushRadius: 1,
+    brushRadius: 10,
   }
 
   constructor(props) {
@@ -42,7 +42,7 @@ class App extends Component {
             hideGrid={true}
             lazyRadius="0"
         />
-          <Popup colorChanger={this.colorChanger} brushRadiusChanger={this.brushRadiusChanger} />
+          <Popup colorChanger={this.colorChanger} brushRadius={this.state.brushRadius} brushRadiusChanger={this.brushRadiusChanger} />
         </div>
       </div>
     );
